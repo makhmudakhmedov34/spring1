@@ -8,12 +8,15 @@ import java.util.function.Function;
 public class CydeoApp {
     public static void main(String[] args) {
 
-        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigApp.class,ConfigAny.class);
+        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigApp.class,
+                ConfigAny.class,CarConfig.class);
        FullTimeMentor ft = container.getBean(FullTimeMentor.class);
        ft.createAccount();
 
       String string =  container.getBean(String.class);
         System.out.println(string);
+       Car newCar = container.getBean(Car.class);
+        System.out.println("newCar.getMake() = " + newCar.getMake());
 
 
     }
