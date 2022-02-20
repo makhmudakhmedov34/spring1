@@ -19,9 +19,16 @@ public class CydeoApp {
 
       String string =  container.getBean(String.class);
         System.out.println(string);
-       Car newCar = container.getBean(Car.class);
-        System.out.println("newCar.getMake() = " + newCar.getMake());
+      // Car newCar1 = container.getBean("toyota",Car.class);
+        Car newCar1 = container.getBean(Car.class);
 
+        System.out.println("newCar.getMake() = " + newCar1.getMake());
+
+        //Car newCar2 = container.getBean("honda",Car.class);
+
+        Car newCar2 = container.getBean(Car.class);
+
+        System.out.println("newCar2.getMake() = " + newCar2.getMake());
 
     }
 }
