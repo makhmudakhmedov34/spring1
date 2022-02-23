@@ -14,12 +14,12 @@ public class CydeoApp {
         comment.setText("Spring Framework");
 
         ApplicationContext container = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        CommentService commentService = container.getBean(CommentService.class);
-        CommentService commentService1 = container.getBean(CommentService.class);
-        System.out.println("commentService = " + commentService);
-        System.out.println("commentService1 = " + commentService1);
-
-        System.out.println(commentService==commentService1);
+//        CommentService commentService = container.getBean(CommentService.class);
+//        CommentService commentService1 = container.getBean(CommentService.class);
+//        System.out.println("commentService = " + commentService);
+//        System.out.println("commentService1 = " + commentService1);
+//
+//        System.out.println(commentService==commentService1);
 
     }
 }
